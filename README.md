@@ -1,28 +1,97 @@
-# 🌲 Cypress, do Zero à Nuvem ☁️
+# Curso Cypress, do Zero à Nuvem
 
-👋 Seja bem-vindo(a)!
+Repositório com os códigos e exercícios realizados durante o curso **Cypress do Zero à Nuvem**, abordando conceitos de testes automatizados, boas práticas de automação e execução de testes em diferentes resoluções de tela.
 
-É muito bom tê-lo(a) aqui. Tenho certeza que você vai amar esse curso. ❤️
+## Sobre o projeto
 
-## O que você vai aprender?
+Este repositório contém os exercícios e exemplos desenvolvidos durante o curso, com o objetivo de praticar a automação de testes utilizando Cypress, desde os conceitos básicos até a execução dos testes em diferentes ambientes.
 
-- Como configurar um projeto Cypress do zero
-- Como visitar páginas locais e remotas
-- Como lidar com os elementos mais comuns encontrados em aplicações web
-- Como testar upload de arquivos
-- Como realizar as mais diversas verificações de resultados esperados
-- Como criar comandos customizados
-- Como lidar com links que abrem em outra aba do navegador
-- Como rodar testes simulando as dimensões de um dispositivo móvel
-- Como resolver os mesmos problemas de diferentes formas, conhecendo a [API do Cypress](https://docs.cypress.io/api/table-of-contents)
-- Como criar uma documentação mínima para seu projeto de testes automatizados
-- Como executar os testes em um _workflow_ de integração contínua sempre que mudanças ocorrerem no código da aplicação (ou dos testes)
-- Como integrar seu _workflow_ de integração contínua com o Cypress Cloud (o serviço de gestão de testes do Cypress na nuvem)
+## Pré-requisitos
 
-## Vamos começar?
+- Cypress instalado na versão 13.12.0
+- Visual Studio Code instalado
+- Node.js instalado
+- Conta criada no GitHub
 
-Vá para a seção [estrutura do curso](./lessons/_course-structure_.md).
+## Como instalar as dependências
 
-___
+Baixe as ferramentas necessárias:
 
-Este é um curso da **Escola Talking About Testing**.
+- Node.js e npm: https://nodejs.org/pt-br/download
+- Git: https://git-scm.com/install/windows
+- Visual Studio Code: https://code.visualstudio.com/download
+
+Clone o repositório:
+
+```bash
+git clone <url-do-repositorio>
+```
+
+Acesse a pasta do projeto:
+
+```bash
+cd nome-do-projeto
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+## Estrutura do projeto
+
+```text
+├── cypress
+│   ├── e2e
+│   ├── fixtures
+│   ├── support
+│   └── downloads
+├── cypress.config.js
+├── package.json
+└── README.md
+```
+
+## Passos para executar os testes
+
+1. Configure o arquivo `cypress.config.js` com as dimensões do viewport desejadas.
+2. Adicione os scripts abaixo ao arquivo `package.json`.
+
+```json
+{
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:open:mobile": "cypress open --config viewportWidth=410,viewportHeight=860",
+    "test:mobile": "cypress run --config viewportWidth=410,viewportHeight=860",
+    "test": "cypress run"
+  }
+}
+```
+
+## Scripts disponíveis
+
+| Comando | Descrição |
+|----------|------------|
+| npm run cy:open | Abre o Cypress Runner |
+| npm run cy:open:mobile | Abre o Cypress simulando um dispositivo mobile |
+| npm run test | Executa todos os testes em modo headless |
+| npm run test:mobile | Executa os testes em modo headless simulando um dispositivo mobile |
+
+## Tecnologias utilizadas
+
+- Cypress
+- JavaScript
+- Node.js
+- Git
+- GitHub
+
+## Autora
+
+**Lara Alves**
+
+- Formada em Sistemas de Informação
+- QA com experiência em testes manuais e estudos em automação de testes
+- GitHub: https://github.com/laraalvesfreitas
+- LinkedIn: https://www.linkedin.com/in/laraalvesfreitas
+
+
